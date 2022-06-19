@@ -6,8 +6,8 @@ int main(void)
 {
     int n;
     cin>>n;
-    stack<int> st;  //int type의 stack 선언
-    string str; //명령어를 받기위해 선언된 string형 변수
+    stack<int> st; 
+    string str; 
     for(int i=0;i<n;i++)
     {
         cin>>str;
