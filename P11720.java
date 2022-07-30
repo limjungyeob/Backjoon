@@ -8,7 +8,7 @@ public class P11720 {
         String sNum = sc.next();
         char[] cNum = sNum.toCharArray();
         int sum = 0;
-        for(int i = 0; i< cNum.length;i++){
+        for(int i = 0; i< cNum.length || i<N;i++){
             sum += cNum[i] - '0';   //cNum[i]를 정수형으로 변환하면서 snum에 더하여 누적하기
         }
         System.out.print(sum);
