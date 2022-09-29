@@ -10,7 +10,8 @@ public class P10986 {
         long[] S = new long[N];
         long[] C = new long[M];
         long answer = 0;
-        S[0] = sc.nextInt();
+        try {
+            S[0] = sc.nextInt();
         //수열 합 배열 만들기
         for(int i=1; i<N; i++){
             S[i] = S[i-1] + sc.nextInt();
@@ -34,5 +35,11 @@ public class P10986 {
             }
         }
         System.out.println(answer);
+        } catch (Exception e) {
+           
+        }finally{
+            sc.close();
+        }
+        
     }
 }
