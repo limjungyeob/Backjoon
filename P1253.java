@@ -9,7 +9,7 @@ public class P1253 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
         int result = 0;
-        long A[] = new long[N];
+        long A[] = new long[N]; 
         StringTokenizer st = new StringTokenizer(br.readLine());
         for(int i = 0; i<N; i++){
             A[i] = Long.parseLong(st.nextToken());
