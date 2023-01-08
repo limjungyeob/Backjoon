@@ -24,8 +24,8 @@ public class P11003 {
         
         for(int i = 0; i < N; i++){
             int now = Integer.parseInt(st.nextToken());
+            
             // 새로운 값이 들어올 때마다 정렬 대신 현재 수보다 큰 값을 덱에서 제거해 시간 복잡도를 줄임.
-
             while(!myDeque.isEmpty() && myDeque.getLast().value > now){
                 myDeque.removeLast();
             }
