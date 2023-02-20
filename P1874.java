@@ -38,6 +38,7 @@ public class P1874 {
         }
         if(result){
         System.out.println(bf.toString());
+        sc.close();
         }
     }
 }
