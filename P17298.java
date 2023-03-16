@@ -20,7 +20,7 @@ public class P17298 {
         }
         Stack<Integer> mStack = new Stack<>();
         mStack.push(0); //init
-        for(int i=0; i<n; i++){
+        for(int i=1; i<n; i++){
             //스택이 비어 있지 않고, 현재 수열이 스택 top 인덱스(정답 -> 오큰수)가 가리키는 수열보다 클 경우
             while(!mStack.isEmpty() && A[mStack.peek()] < A[i]){
                 //정답 배열에 오큰수를 저장.
