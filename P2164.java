@@ -22,4 +22,5 @@ public class P2164 {
         System.out.println(que.poll());
 
     }
+    
 }
