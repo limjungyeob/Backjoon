@@ -5,7 +5,8 @@ public class P2570 {
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
         int A[] = new int[N];
-        for(int i=0; i<N; i++){
+        try {
+           for(int i=0; i<N; i++){
             A[i] = sc.nextInt();
         }
 
@@ -21,6 +22,10 @@ public class P2570 {
 
         for(int i=0; i<N; i++){
             System.out.println(A[i]);
+        } 
+        } catch (Exception e) {
+            
         }
+        sc.close();
     }
 }
