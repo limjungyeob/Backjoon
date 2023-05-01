@@ -7,7 +7,8 @@ public class P2164 {
         Scanner sn = new Scanner(System.in);
         Queue <Integer> que = new LinkedList<>();
         int N = sn.nextInt();
-        for(int i=1; i <= N; i++){
+        try {
+           for(int i=1; i <= N; i++){
             //카드를 큐에 저장하기.
             que.add(i);
         }
@@ -19,7 +20,12 @@ public class P2164 {
             que.add(que.poll());
         }
         
-        System.out.println(que.poll());
+        System.out.println(que.poll()); 
+        } catch (Exception e) {
+           e.printStackTrace();
+        }
+        sn.close();
+        
 
     }
     
