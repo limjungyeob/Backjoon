@@ -14,7 +14,7 @@ public class P1427 {
                 //내림차순이므로 최댓값을 찾음
                 if(A[j] > A[max]) {
                     max = j;
-                }sdsd
+                }
             }
 
             if(A[i] < A[max]) {
