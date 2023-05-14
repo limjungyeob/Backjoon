@@ -6,11 +6,12 @@ import java.util.StringTokenizer;
 public class P11399 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = new StringTokenizer(br.readLine());
+       
         int N = Integer.parseInt(br.readLine());
         int A[] = new int[N];
         int S[] = new int[N];
 
+        StringTokenizer st = new StringTokenizer(br.readLine());
         for(int i=0; i<N; i++) {
             A[i] = Integer.parseInt(st.nextToken());
         }
@@ -19,7 +20,7 @@ public class P11399 {
             int insert_point = i;
             int insert_value = A[i];
             for(int j= i-1; j>=0; j--) {
-                if(A[i] < A[j]) {
+                if(A[j] < A[i]) {
                     insert_point = j+1;
                     break;
                 }
@@ -28,7 +29,7 @@ public class P11399 {
                 }
             }
             for(int j=i; j>insert_point; j--) {
-                A[i] = A[j-1];
+                A[j] = A[j-1];
             }
             A[insert_point] = insert_value;
         }
