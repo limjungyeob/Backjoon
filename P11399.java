@@ -33,7 +33,7 @@ public class P11399 {
             }
             A[insert_point] = insert_value;
         }
-
+ 
         S[0] = A[0];
         for(int i=1; i<N; i++) {
             S[i] = S[i-1] + A[i];
