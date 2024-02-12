@@ -44,15 +44,15 @@ public static void swap(int A[], int i, int j) {
     public static void main(String[] args) throws IOException {
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(in.readLine());
-        int N = Integer.parseInt(st.nextToken());
-        int K = Integer.parseInt(st.nextToken());
+        int n = Integer.parseInt(st.nextToken());
+        int k = Integer.parseInt(st.nextToken());
 
         st = new StringTokenizer(in.readLine());
-        int A[] = new int[N];
-        for(int i=0; i<N; i++) {
+        int A[] = new int[n];
+        for(int i=0; i<n; i++) {
             A[i] = Integer.parseInt(st.nextToken());
         }
-        quickSort(A, 0 , N-1, K-1);
-        System.out.println(A[K-1]);
+        quickSort(A, 0 , n-1, k-1);
+        System.out.println(A[k-1]);
     }
 }
