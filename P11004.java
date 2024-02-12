@@ -28,7 +28,7 @@ public static int partition(int A[], int S, int E){
         }
 
         while(i < j && pivot >= A[i]) {
-        i++;
+            i++;
         }
         swap(A,i,j);
     }
