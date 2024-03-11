@@ -19,7 +19,7 @@ public class P11004_failCode {
         quickSort(A, 0, N-1, M-1);
 
         System.out.println(A[M-1]);
-
+ 
     }
 
     public static void quickSort(int A[], int S, int E, int K){
@@ -46,7 +46,7 @@ public class P11004_failCode {
             }
     
             while(i < j && pivot >= A[i]) {
-            i++;
+                i++;
             }
             swap(A,i,j);
         }
