@@ -1,5 +1,29 @@
+import java.io.IOException;
+
 public class P2751 {
     private static int tmpArr[]; //합치는 과정에서 정렬하여 원소를 담을 임시 배열
+
+    public static void main(String[] args) throws IOException {
+        
+    }
+
+    //Top-Down 방식 구현
+    private static void merge_sort(int a[], int left, int right) {
+        /*
+		 *  left==right 즉, 부분리스트가 1개의 원소만 갖고있는경우 
+		 *  더이상 쪼갤 수 없으므로 return한다.
+		 */
+        if(left == right) return;
+
+        int mid = (left + right) / 2;   //절반 위치
+
+        merge_sort(a, left, mid);       //전반 중 왼쪽 부분 리스트(left ~ mid)
+        merge_sort(a, mid+1, right);    //절반 중 오른쪽 부분리스트(mid+1 ~ right)
+
+        merge(a, left, mid, right);     //병합
+    }
+
+
     /**
      * 부분리스트는 a배열의 left ~ right 까지이다. 
      * 
