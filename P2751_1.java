@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
 public class P2751_1 {
-    private static int sorted[] = new int[10000]; //합치는 과정에서 정렬하여 원소를 담을 임시 배열
+    private static int sorted[] = new int[1000001]; //합치는 과정에서 정렬하여 원소를 담을 임시 배열
 
     public static void main(String[] args) throws IOException,NumberFormatException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -69,7 +69,7 @@ public class P2751_1 {
         }
         
         //남아 있는 레코드의 일괄 복사
-        if(l < mid) {
+        if(l > mid) {
             for(int tr=r; tr<=right; tr++) {
                 sorted[idx++] = a[tr];
             }
