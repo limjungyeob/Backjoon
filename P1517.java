@@ -62,6 +62,8 @@ public class P1517 {
                 sorted[idx++] = a[l++];
             } else {
                 result = result + r - idx; //왼쪽 배열에 남아 있는 숫자만큼 계속 swap이 발생하기 때문에 r - idx만큼 추가함. r = mid+1
+                //뒤쪽 데이터 값이 더 작아 선택될 때
+                //swap이 일어났다고 가정하고, 현재 남아 있는 앞쪽 데이터 개수만큼 결괏값을 더함.
                 sorted[idx++] = a[r++];
             }
         }
