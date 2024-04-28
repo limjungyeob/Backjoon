@@ -7,12 +7,13 @@ import java.util.StringTokenizer;
 
 
 public class P1517 {
-    private static int sorted[] = new int[100000]; //합치는 과정에서 정렬하여 원소를 담을 임시 배열
-    public static int result=0;
+    private static long sorted[]; //합치는 과정에서 정렬하여 원소를 담을 임시 배열
+    public static long result=0;
     public static void main(String[] args) throws IOException,NumberFormatException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
-        int [] arr = new int[N];
+        long [] arr = new long[N];
+        sorted = new long[N];
         StringTokenizer st = new StringTokenizer(br.readLine());
         for (int i=0; i<N; i++) {
             arr[i] = Integer.parseInt(st.nextToken());
@@ -24,7 +25,7 @@ public class P1517 {
     }
 
     //Top-Down 방식 구현
-    private static void merge_sort(int a[], int left, int right) {
+    private static void merge_sort(long a[], int left, int right) {
         /*
 		 *  left==right 즉, 부분리스트가 1개의 원소만 갖고있는경우 
 		 *  더이상 쪼갤 수 없으므로 return한다.
@@ -50,7 +51,7 @@ public class P1517 {
      * @param right	배열의 끝 점
      */
 
-    private static void merge(int a[], int left, int mid, int right) {
+    private static void merge(long a[], int left, int mid, int right) {
         int l = left;		// 왼쪽 부분리스트 시작점
         int r = mid +1;	    // 오른쪽 부분리스트의 시작점 
         int idx = left;     // 채워넣을 배열의 인덱스
