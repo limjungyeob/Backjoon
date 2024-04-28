@@ -61,7 +61,7 @@ public class P1517 {
             if(a[l] <= a[r]) {
                 sorted[idx++] = a[l++];
             } else {
-                result = result + r - idx;
+                result = result + r - idx; //왼쪽 배열에 남아 있는 숫자만큼 계속 swap이 발생하기 때문에 r - idx만큼 추가함. r = mid+1
                 sorted[idx++] = a[r++];
             }
         }
